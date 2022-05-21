@@ -91,17 +91,36 @@ function cleanCart() {
 // Exercise 3
 function calculateTotal() {
   // Calculate total price of the cart using the "cartList" array
-  let totalPrice = 0;
+  total = 0;
 
   for (let i = 0; i < cartList.length; i++) {
-    totalPrice += cartList[i].price;
+    total += cartList[i].price;
   }
+
+  return total;
 }
 
 // Exercise 4
 function generateCart() {
   // Using the "cartlist" array that contains all the items in the shopping cart,
   // generate the "cart" array that does not contain repeated items, instead each item of this array "cart" shows the quantity of product.
+  let isDuplicated = false;
+
+  for (let i = 0; i < cartList.length; i++) {
+    for (let j = 0; j < cartList.length; j++) {
+      if (cart.length === 0) {
+        cartList[i].quantity = 1;
+        cart.push(cartList[i]);
+      }
+
+      if (i !== j) {
+        if (cartList[i].id === cartList[j].id) {
+          isDuplicated = true;
+          break;
+        }
+      }
+    }
+  }
 }
 
 // Exercise 5
