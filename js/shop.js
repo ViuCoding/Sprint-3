@@ -110,7 +110,6 @@ function generateCart() {
   let j;
 
   for (i = 0; i < cartList.length; i++) {
-    // IF CART IS EMPTY WE SIMPLY PUSH THE FIRST ELEMENT IN THE cartList ARRAY.
     if (cart.length === 0) {
       cartList[i].quantity = 1;
       cart.push(cartList[i]);
@@ -120,13 +119,9 @@ function generateCart() {
       if (i !== j) {
         if (cartList[i].id === cart[j].id) {
           isDuplicated = true;
-          // cart[j].quantity++;
           break;
         } else {
           isDuplicated = false;
-          // cartList[i].quantity = 1;
-          // cart.push(cartList[i]);
-          // break;
         }
       }
     }
@@ -137,18 +132,27 @@ function generateCart() {
       cartList[i].quantity = 1;
       cart.push(cartList[i]);
     }
-
-    // if (isDuplicated) {
-    //   cart[j].quantity++;
-    // }
   }
 
-  console.table(cart);
+  // console.table(cart);
+  applyPromotionsCart(cart);
 }
 
 // Exercise 5
-function applyPromotionsCart() {
+function applyPromotionsCart(cart) {
   // Apply promotions to each item in the array "cart"
+
+  // PROMOTION FOR ITEM "COOKING OIL"
+  for (let i = 0; i < cart.length; i++) {
+    if (cart[i].id === 1) {
+      if (cart[i].quantity >= 3) {
+        cart[i].price = 10;
+      }
+    }
+  }
+
+  console.table(cart);
+  console.log("Total price is " + calculateTotal());
 }
 
 // Exercise 6
