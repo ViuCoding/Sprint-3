@@ -104,23 +104,46 @@ function calculateTotal() {
 function generateCart() {
   // Using the "cartlist" array that contains all the items in the shopping cart,
   // generate the "cart" array that does not contain repeated items, instead each item of this array "cart" shows the quantity of product.
+  cart.length = 0;
   let isDuplicated = false;
+  let i;
+  let j;
 
-  for (let i = 0; i < cartList.length; i++) {
-    for (let j = 0; j < cartList.length; j++) {
-      if (cart.length === 0) {
-        cartList[i].quantity = 1;
-        cart.push(cartList[i]);
-      }
+  for (i = 0; i < cartList.length; i++) {
+    // IF CART IS EMPTY WE SIMPLY PUSH THE FIRST ELEMENT IN THE cartList ARRAY.
+    if (cart.length === 0) {
+      cartList[i].quantity = 1;
+      cart.push(cartList[i]);
+    }
 
+    for (j = 0; j < cart.length; j++) {
       if (i !== j) {
-        if (cartList[i].id === cartList[j].id) {
+        if (cartList[i].id === cart[j].id) {
           isDuplicated = true;
+          // cart[j].quantity++;
           break;
+        } else {
+          isDuplicated = false;
+          // cartList[i].quantity = 1;
+          // cart.push(cartList[i]);
+          // break;
         }
       }
     }
+
+    if (isDuplicated) {
+      cart[j].quantity++;
+    } else if (!isDuplicated && i != 0) {
+      cartList[i].quantity = 1;
+      cart.push(cartList[i]);
+    }
+
+    // if (isDuplicated) {
+    //   cart[j].quantity++;
+    // }
   }
+
+  console.table(cart);
 }
 
 // Exercise 5
