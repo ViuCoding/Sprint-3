@@ -86,6 +86,8 @@ function buy(id) {
 // Exercise 2
 function cleanCart() {
   cartList.length = 0;
+  document.getElementById("cart_list").innerHTML = "";
+  document.getElementById("total_price").innerHTML = 0;
 }
 
 // Exercise 3
@@ -162,9 +164,8 @@ function applyPromotionsCart(cart) {
     }
   }
 
-  console.table(cart);
-  console.log("Total price is " + calculateTotal());
   printCart();
+  calculateTotal();
 }
 
 // Exercise 6
