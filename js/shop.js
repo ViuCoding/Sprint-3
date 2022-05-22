@@ -97,7 +97,7 @@ function calculateTotal() {
     total += cartList[i].price;
   }
 
-  return total;
+  return total.toFixed(2);
 }
 
 // Exercise 4
@@ -147,6 +147,17 @@ function applyPromotionsCart(cart) {
     if (cart[i].id === 1) {
       if (cart[i].quantity >= 3) {
         cart[i].price = 10;
+        cart[i].subtotalWithDiscount = cart[i].price * cart[i].quantity;
+      }
+    }
+  }
+
+  // PROMOTION FOR CAKE INGREDIENTS
+  for (let i = 0; i < cart.length; i++) {
+    if (cart[i].id === 3) {
+      if (cart[i].quantity >= 10) {
+        cart[i].price = 3.33;
+        cart[i].subtotalWithDiscount = cart[i].price * cart[i].quantity;
       }
     }
   }
