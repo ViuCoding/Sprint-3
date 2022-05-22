@@ -164,11 +164,34 @@ function applyPromotionsCart(cart) {
 
   console.table(cart);
   console.log("Total price is " + calculateTotal());
+  printCart();
 }
 
 // Exercise 6
 function printCart() {
   // Fill the shopping cart modal manipulating the shopping cart dom
+
+  let cartTableString = " ";
+
+  for (let i = 0; i < cart.length; i++) {
+    cartTableString += "<tr>";
+    cartTableString += "<th scope='row'>";
+    cartTableString += cart[i].name;
+    cartTableString += "</th>";
+    cartTableString += "<td>";
+    cartTableString += "$" + cart[i].price;
+    cartTableString += "</td>";
+    cartTableString += "<td>";
+    cartTableString += cart[i].quantity;
+    cartTableString += "</td>";
+    cartTableString += "<td>";
+    cartTableString += "$" + cart[i].price * cart[i].quantity;
+    cartTableString += "</td>";
+    cartTableString += "</tr>";
+  }
+
+  document.getElementById("cart_list").innerHTML = cartTableString;
+  document.getElementById("total_price").innerHTML = total;
 }
 
 // ** Nivell II **
