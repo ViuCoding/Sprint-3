@@ -80,7 +80,8 @@ function validate() {
   }
 
   // Phone Number Validation
-  if (fPhone == "" || fPhone.length < 3) {
+  let fPhoneNumbersOnly = numbersOnly(fPhone);
+  if (fPhone == "" || fPhone.length < 9 || !fPhoneNumbersOnly) {
     error++;
     document.getElementById("errorPhone").style.display = "block";
     document.getElementById("fPhone").style.backgroundColor = "lightcoral";
@@ -101,4 +102,8 @@ function validate() {
 function lettersOnly(str) {
   // Returns true if the string passed as the arguments only contains letters.
   return /^[a-zA-Z]+$/.test(str);
+}
+function numbersOnly(str) {
+  // Returns true if the string passed as the arguments only contains numbers.
+  return /^[0-9]+$/.test(str);
 }
