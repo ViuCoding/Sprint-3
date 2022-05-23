@@ -16,9 +16,9 @@ function validate() {
   // Validate fields entered by the user: name, phone, password, and email
 
   // First Name Validation
-  let fNameLettersOnly = lettersOnly(fName);
+  let firstNameCheck = lettersOnly(fName);
 
-  if (fName == "" || fName.length < 3 || !fNameLettersOnly) {
+  if (fName == "" || fName.length < 3 || !firstNameCheck) {
     error++;
     document.getElementById("errorName").style.display = "block";
     document.getElementById("fName").style.backgroundColor = "lightcoral";
@@ -30,7 +30,9 @@ function validate() {
   }
 
   // Email Validation
-  if (fEmail == "" || fEmail.length < 3) {
+  let emailCheck = emailRegex(fEmail);
+
+  if (fEmail == "" || fEmail.length < 3 || !emailCheck) {
     error++;
     document.getElementById("errorEmail").style.display = "block";
     document.getElementById("fEmail").style.backgroundColor = "lightcoral";
@@ -54,9 +56,9 @@ function validate() {
   }
 
   // Last Name Validation
-  let fLastNLettersOnly = lettersOnly(fLastN);
+  let lastNameCheck = lettersOnly(fLastN);
 
-  if (fLastN == "" || fLastN.length < 3 || !fLastNLettersOnly) {
+  if (fLastN == "" || fLastN.length < 3 || !lastNameCheck) {
     error++;
     document.getElementById("errorLastN").style.display = "block";
     document.getElementById("fLastN").style.backgroundColor = "lightcoral";
@@ -68,7 +70,9 @@ function validate() {
   }
 
   // Password Validation
-  if (fPassword == "" || fPassword.length < 3) {
+  let passwordCheck = numbersLettersOnly(fPassword);
+
+  if (fPassword == "" || fPassword.length < 4 || fPassword.length > 8 || !passwordCheck) {
     error++;
     document.getElementById("errorPassword").style.display = "block";
     document.getElementById("fPassword").style.backgroundColor = "lightcoral";
@@ -80,8 +84,9 @@ function validate() {
   }
 
   // Phone Number Validation
-  let fPhoneNumbersOnly = numbersOnly(fPhone);
-  if (fPhone == "" || fPhone.length !== 9 || !fPhoneNumbersOnly) {
+  let phoneCheck = numbersOnly(fPhone);
+
+  if (fPhone == "" || fPhone.length !== 9 || !phoneCheck) {
     error++;
     document.getElementById("errorPhone").style.display = "block";
     document.getElementById("fPhone").style.backgroundColor = "lightcoral";
@@ -100,10 +105,18 @@ function validate() {
 }
 
 function lettersOnly(str) {
-  // Returns true if the string passed as the arguments only contains letters.
+  // Returns true if the string passed as the argument only contains letters.
   return /^[a-zA-Z]+$/.test(str);
 }
 function numbersOnly(str) {
-  // Returns true if the string passed as the arguments only contains numbers.
+  // Returns true if the string passed as the argument only contains numbers.
   return /^[0-9]+$/.test(str);
+}
+function numbersLettersOnly(str) {
+  // Returns true if the string passed as the argument only contains numbers &/OR letters.
+  return /^[a-zA-Z0-9]+$/.test(str);
+}
+function emailRegex(str) {
+  // Returns true if the string passed as the argument has the correct email format.
+  return /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/gi.test(str);
 }
