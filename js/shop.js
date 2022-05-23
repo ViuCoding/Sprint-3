@@ -137,7 +137,6 @@ function generateCart() {
     }
   }
 
-  // console.table(cart);
   // applyPromotionsCart(cart);
 }
 
@@ -157,7 +156,7 @@ function applyPromotionsCart(cart) {
     }
   }
 
-  // PROMOTION FOR CAKE INGREDIENTS
+  // PROMOTION FOR ITEM "CAKE INGREDIENTS"
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].id === 3) {
       if (cart[i].quantity >= 10) {
@@ -190,7 +189,7 @@ function printCart() {
     cartTableString += cart[i].quantity;
     cartTableString += "</td>";
     cartTableString += "<td>";
-    cartTableString += "$" + cart[i].price * cart[i].quantity;
+    cartTableString += "$" + (cart[i].price * cart[i].quantity).toFixed(2);
     cartTableString += "</td>";
     cartTableString += "</tr>";
   }
