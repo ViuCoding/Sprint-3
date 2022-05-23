@@ -1,6 +1,5 @@
 // Exercise 6
 function validate() {
-  var error = 0;
   // Get the input fields
   var fName = document.getElementById("fName").value;
   var fEmail = document.getElementById("fEmail").value;
@@ -9,17 +8,12 @@ function validate() {
   var fPassword = document.getElementById("fPassword").value;
   var fPhone = document.getElementById("fPhone").value;
 
-  // Get the error elements
-  var errorName = document.getElementById("errorName");
-  var errorEmail = document.getElementById("errorEmail");
-
   // Validate fields entered by the user: name, phone, password, and email
 
   // First Name Validation
   let firstNameCheck = lettersOnly(fName);
 
   if (fName == "" || fName.length < 3 || !firstNameCheck) {
-    error++;
     document.getElementById("errorName").style.display = "block";
     document.getElementById("fName").style.backgroundColor = "lightcoral";
     document.getElementById("fName").style.color = "white";
@@ -33,7 +27,6 @@ function validate() {
   let emailCheck = emailRegex(fEmail);
 
   if (fEmail == "" || fEmail.length < 3 || !emailCheck) {
-    error++;
     document.getElementById("errorEmail").style.display = "block";
     document.getElementById("fEmail").style.backgroundColor = "lightcoral";
     document.getElementById("fEmail").style.color = "white";
@@ -45,7 +38,6 @@ function validate() {
 
   // Address Validation
   if (fAddress == "" || fAddress.length < 3) {
-    error++;
     document.getElementById("errorAddress").style.display = "block";
     document.getElementById("fAddress").style.backgroundColor = "lightcoral";
     document.getElementById("fAddress").style.color = "white";
@@ -59,7 +51,6 @@ function validate() {
   let lastNameCheck = lettersOnly(fLastN);
 
   if (fLastN == "" || fLastN.length < 3 || !lastNameCheck) {
-    error++;
     document.getElementById("errorLastN").style.display = "block";
     document.getElementById("fLastN").style.backgroundColor = "lightcoral";
     document.getElementById("fLastN").style.color = "white";
@@ -73,7 +64,6 @@ function validate() {
   let passwordCheck = numbersLettersOnly(fPassword);
 
   if (fPassword == "" || fPassword.length < 4 || fPassword.length > 8 || !passwordCheck) {
-    error++;
     document.getElementById("errorPassword").style.display = "block";
     document.getElementById("fPassword").style.backgroundColor = "lightcoral";
     document.getElementById("fPassword").style.color = "white";
@@ -87,7 +77,6 @@ function validate() {
   let phoneCheck = numbersOnly(fPhone);
 
   if (fPhone == "" || fPhone.length !== 9 || !phoneCheck) {
-    error++;
     document.getElementById("errorPhone").style.display = "block";
     document.getElementById("fPhone").style.backgroundColor = "lightcoral";
     document.getElementById("fPhone").style.color = "white";
@@ -96,12 +85,6 @@ function validate() {
     document.getElementById("fPhone").style.backgroundColor = "aquamarine";
     document.getElementById("fPhone").style.color = "black";
   }
-
-  // if (error > 0) {
-  //   alert("Error");
-  // } else {
-  //   alert("OK");
-  // }
 }
 
 function lettersOnly(str) {
