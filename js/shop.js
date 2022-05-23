@@ -170,13 +170,13 @@ function applyPromotionsCart(cart) {
     }
   }
 
-  printCart();
   calculateTotal();
 }
 
 // Exercise 6
 function printCart() {
   // Fill the shopping cart modal manipulating the shopping cart dom
+  generateCart();
 
   let cartTableString = " ";
 
