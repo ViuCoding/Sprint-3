@@ -85,8 +85,7 @@ function buy(id) {
 
 // Exercise 2
 function cleanCart() {
-  cartList = [];
-  cart = [];
+  cart.length = 0;
   total = 0;
   document.getElementById("cart_list").innerHTML = "";
   document.getElementById("total_price").innerHTML = 0;
@@ -97,8 +96,8 @@ function calculateTotal() {
   // Calculate total price of the cart using the "cartList" array
   total = 0;
 
-  for (let i = 0; i < cartList.length; i++) {
-    total += cartList[i].price;
+  for (let i = 0; i < cart.length; i++) {
+    total += cart[i].price * cart[i].quantity;
   }
 
   return total;
@@ -139,7 +138,7 @@ function generateCart() {
   }
 
   // console.table(cart);
-  applyPromotionsCart(cart);
+  // applyPromotionsCart(cart);
 }
 
 // Exercise 5
@@ -176,7 +175,6 @@ function applyPromotionsCart(cart) {
 // Exercise 6
 function printCart() {
   // Fill the shopping cart modal manipulating the shopping cart dom
-  generateCart();
 
   let cartTableString = " ";
 
@@ -208,6 +206,43 @@ function addToCart(id) {
   // Refactor previous code in order to simplify it
   // 1. Loop for to the array products to get the item to add to cart
   // 2. Add found product to the cart array or update its quantity in case it has been added previously.
+
+  // IF the array cart is empty, we push the first element with quantity = 1 to the array cart.
+  // We loop through the array of products and once we find the corresponding product id we send it to cart.
+
+  let isDuplicated = false;
+  let index;
+
+  if (cart.length === 0) {
+    for (let i = 1; i <= products.length; i++) {
+      if (i === id) {
+        products[i - 1].quantity = 1;
+        cart.push(products[i - 1]);
+        break;
+      }
+    }
+  } else {
+    // IF the array cart is not empty we start looking for duplicates
+    // We loop through the cart array.
+    // IF the item has a match with the same id in the cart array it means that it is a duplicate so we break the loop and we add 1 to its quantity.
+    for (index = 0; index < cart.length; index++) {
+      if (cart[index].id === id) {
+        isDuplicated = true;
+        break;
+      } else {
+        isDuplicated = false;
+      }
+    }
+
+    if (isDuplicated) {
+      cart[index].quantity++;
+    } else {
+      products[id - 1].quantity = 1;
+      cart.push(products[id - 1]);
+    }
+  }
+
+  applyPromotionsCart(cart);
 }
 
 // Exercise 8
