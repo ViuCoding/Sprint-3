@@ -81,7 +81,7 @@ function validate() {
 
   // Phone Number Validation
   let fPhoneNumbersOnly = numbersOnly(fPhone);
-  if (fPhone == "" || fPhone.length < 9 || !fPhoneNumbersOnly) {
+  if (fPhone == "" || fPhone.length !== 9 || !fPhoneNumbersOnly) {
     error++;
     document.getElementById("errorPhone").style.display = "block";
     document.getElementById("fPhone").style.backgroundColor = "lightcoral";
