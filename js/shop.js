@@ -200,7 +200,7 @@ function printCart() {
 
 // ** Nivell II **
 
-// Exercise 7
+// Exercise 8
 function addToCart(id) {
   // Refactor previous code in order to simplify it
   // 1. Loop for to the array products to get the item to add to cart
@@ -244,11 +244,8 @@ function addToCart(id) {
   applyPromotionsCart(cart);
 }
 
-// Exercise 8
-function removeFromCart(id) {
-  // 1. Loop for to the array products to get the item to add to cart
-  // 2. Add found product to the cartList array
-}
+// Exercise 9
+function removeFromCart(id) {}
 
 function open_modal() {
   console.log("Open Modal");

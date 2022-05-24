@@ -1,4 +1,4 @@
-// Exercise 6
+// Exercise 7
 function validate() {
   // Get the input fields
   var fName = document.getElementById("fName").value;
