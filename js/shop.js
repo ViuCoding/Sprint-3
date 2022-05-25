@@ -89,6 +89,7 @@ function cleanCart() {
   total = 0;
   document.getElementById("cart_list").innerHTML = "";
   document.getElementById("total_price").innerHTML = 0;
+  updateCartBadge();
 }
 
 // Exercise 3
@@ -241,6 +242,7 @@ function addToCart(id) {
     }
   }
 
+  updateCartBadge();
   applyPromotionsCart(cart);
 }
 
@@ -278,7 +280,18 @@ function removeFromCart(id) {
     }
   }
 
+  updateCartBadge();
   applyPromotionsCart(cart);
+}
+
+function updateCartBadge() {
+  let cartProductCount = 0;
+
+  for (let i = 0; i < cart.length; i++) {
+    cartProductCount += cart[i].quantity;
+  }
+
+  document.getElementById("count_product").innerHTML = cartProductCount;
 }
 
 function open_modal() {
