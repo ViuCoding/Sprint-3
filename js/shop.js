@@ -245,7 +245,41 @@ function addToCart(id) {
 }
 
 // Exercise 9
-function removeFromCart(id) {}
+function removeFromCart(id) {
+  if (cart.length === 0) {
+    alert("The cart is already empty!");
+    return;
+  }
+
+  // We need to loop through cart[] and find a matching id
+  // We then need to find the index of the item inside cart[] so we can later use it with the slice method
+  // If we find it, we reduce its quantity by 1
+  // If the quantity is equal to 0 we remove the item from the array cart[] using splice and the index found earlier
+
+  let isDuplicated = false;
+  let i;
+
+  for (i = 0; i < cart.length; i++) {
+    if (cart[i].id === id) {
+      isDuplicated = true;
+      break;
+    } else {
+      isDuplicated = false;
+    }
+  }
+
+  let foundItem = cart.indexOf(cart[i]);
+
+  if (isDuplicated) {
+    cart[i].quantity--;
+
+    if (cart[i].quantity === 0) {
+      cart.splice(foundItem, 1);
+    }
+  }
+
+  applyPromotionsCart(cart);
+}
 
 function open_modal() {
   console.log("Open Modal");
