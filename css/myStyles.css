@@ -1,9 +1,3 @@
-@media (max-width: 456px) {
-  .remove {
-    margin-top: 5px;
-  }
-}
-
 .navbar {
   background-color: #04131e;
 }
@@ -48,5 +42,11 @@
 #hero .btn:hover {
   background-color: #04131e;
   color: #07cff6;
+}
+
+@media (max-width: 456px) {
+  .remove {
+    margin-top: 5px;
+  }
 }
 /*# sourceMappingURL=myStyles.css.map */

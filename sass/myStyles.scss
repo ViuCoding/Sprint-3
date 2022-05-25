@@ -6,12 +6,6 @@ $clr-3: #0d2534;
 $clr-4: #04131e;
 $clr-5: #020204;
 
-@media (max-width: 456px) {
-  .remove {
-    margin-top: 5px;
-  }
-}
-
 .navbar {
   background-color: $clr-4;
 }
@@ -47,5 +41,11 @@ $clr-5: #020204;
       background-color: $clr-4;
       color: #07cff6;
     }
+  }
+}
+
+@media (max-width: 456px) {
+  .remove {
+    margin-top: 5px;
   }
 }
