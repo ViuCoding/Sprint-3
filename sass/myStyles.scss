@@ -1,0 +1,51 @@
+// COLOR VARIABLES
+
+$clr-1: #07cff6;
+$clr-2: #194162;
+$clr-3: #0d2534;
+$clr-4: #04131e;
+$clr-5: #020204;
+
+@media (max-width: 456px) {
+  .remove {
+    margin-top: 5px;
+  }
+}
+
+.navbar {
+  background-color: $clr-4;
+}
+
+.navbar-nav {
+  .nav-link {
+    color: $clr-1;
+    font-weight: 600;
+  }
+}
+
+.logo {
+  width: 80px;
+}
+
+#hero {
+  height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url("../images/bg-2.jpg") center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    color: $clr-1;
+  }
+
+  .btn {
+    background-color: $clr-1;
+    color: $clr-4;
+
+    &:hover {
+      background-color: $clr-4;
+      color: #07cff6;
+    }
+  }
+}
