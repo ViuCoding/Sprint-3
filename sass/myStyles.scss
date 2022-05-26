@@ -5,9 +5,25 @@ $clr-2: #194162;
 $clr-3: #0d2534;
 $clr-4: #04131e;
 $clr-5: #020204;
+$white: #fff;
 
 .navbar {
   background-color: $clr-4;
+
+  .btn-outline-dark {
+    color: $clr-1;
+    border-color: $clr-1;
+
+    &:hover {
+      color: $white;
+      border-color: $white;
+    }
+  }
+
+  .badge {
+    color: $clr-3;
+    background-color: $clr-1;
+  }
 }
 
 .navbar-nav {
@@ -41,6 +57,12 @@ $clr-5: #020204;
       background-color: $clr-4;
       color: #07cff6;
     }
+  }
+}
+
+@media (max-width: 304px) {
+  .navbar-toggler {
+    display: none;
   }
 }
 

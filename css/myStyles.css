@@ -2,6 +2,21 @@
   background-color: #04131e;
 }
 
+.navbar .btn-outline-dark {
+  color: #07cff6;
+  border-color: #07cff6;
+}
+
+.navbar .btn-outline-dark:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.navbar .badge {
+  color: #0d2534;
+  background-color: #07cff6;
+}
+
 .navbar-nav .nav-link {
   color: #07cff6;
   font-weight: 600;
@@ -42,6 +57,12 @@
 #hero .btn:hover {
   background-color: #04131e;
   color: #07cff6;
+}
+
+@media (max-width: 304px) {
+  .navbar-toggler {
+    display: none;
+  }
 }
 
 @media (max-width: 456px) {
