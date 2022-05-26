@@ -10,21 +10,19 @@ You will be in charge of setting up an initial demo version of the application f
 
 ## Requirements
 
-
 1. Clone this repo
+
 ```bash
 $ git clone https://github.com/IT-Academy-BCN/starter-code-frontend-sprint-3
 ```
 
-2. Unlink your repo from the itacademy repository.
-(Explanation: You have to upload the code to your GitHub repository, not to the IT Academy. That's why you have to unlink your project from IT Academy GitHub with the following command)
+2. Unlink your repo from the itacademy repository. (Explanation: You have to upload the code to your GitHub repository, not to the IT Academy. That's why you have to unlink your project from IT Academy GitHub with the following command)
 
 ```bash
 $ git remote rm origin
 ```
 
-3. Link your repo to the repository you have to create in your github account
-(Explanation: Now your project is not linked to any remote repository. In order to upload your code, you have to link your project to the new repository created on github.com using the following command)
+3. Link your repo to the repository you have to create in your github account (Explanation: Now your project is not linked to any remote repository. In order to upload your code, you have to link your project to the new repository created on github.com using the following command)
 
 ```bash
 $ git remote add origin <your repo name!>
@@ -44,8 +42,6 @@ $ git push origin master
 
 2. Upload the link to the virtual campus so that your mentor can correct it and give you feedback.
 
-
-
 <br>
 
 ## Introduction
@@ -53,7 +49,6 @@ $ git push origin master
 The statement of the exercise is available on the virtual campus.
 
 <br>
-
 
 ## Instructions
 
@@ -67,6 +62,6 @@ You have the following indications from the frontend manager:
 
 - Except for the last level, showing the result of the functions by console is enough.
 
-- The logic to implement will be placed in the src/grocery.js and src/checkout.js files. You will see that the built in functions have already been created for you to implement them.
+- The logic to implement will be placed in the src/rpg.js and src/checkout.js files. You will see that the built in functions have already been created for you to implement them.
 
 - It is forbidden to copy the code, since this way you don't learn anything. Furthermore, as you can see, the second release of sprint 5 is a mini-level test with the mentor, in which you will have to demonstrate live that you have acquired the javascript concepts. Don't worry, if you work on the releases you won't have any problems.
