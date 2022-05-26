@@ -7,6 +7,15 @@ $clr-4: #04131e;
 $clr-5: #020204;
 $white: #fff;
 
+body {
+  background: $clr-4;
+}
+
+h2 {
+  text-transform: uppercase;
+  color: $clr-1;
+}
+
 .navbar {
   background-color: $clr-4;
 
@@ -55,8 +64,27 @@ $white: #fff;
 
     &:hover {
       background-color: $clr-4;
-      color: #07cff6;
+      color: $clr-1;
+      border-color: $clr-1;
     }
+  }
+}
+
+.btn-outline-success {
+  color: $clr-1;
+  border-color: $clr-1;
+
+  &:hover {
+    background-color: $clr-1;
+    color: $clr-3;
+  }
+}
+
+.card {
+  background-color: $clr-3;
+  color: $clr-1;
+  img {
+    width: 100px;
   }
 }
 

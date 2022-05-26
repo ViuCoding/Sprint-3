@@ -1,3 +1,12 @@
+body {
+  background: #04131e;
+}
+
+h2 {
+  text-transform: uppercase;
+  color: #07cff6;
+}
+
 .navbar {
   background-color: #04131e;
 }
@@ -57,6 +66,26 @@
 #hero .btn:hover {
   background-color: #04131e;
   color: #07cff6;
+  border-color: #07cff6;
+}
+
+.btn-outline-success {
+  color: #07cff6;
+  border-color: #07cff6;
+}
+
+.btn-outline-success:hover {
+  background-color: #07cff6;
+  color: #0d2534;
+}
+
+.card {
+  background-color: #0d2534;
+  color: #07cff6;
+}
+
+.card img {
+  width: 100px;
 }
 
 @media (max-width: 304px) {
