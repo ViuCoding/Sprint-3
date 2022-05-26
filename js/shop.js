@@ -2,7 +2,7 @@
 var products = [
   {
     id: 1,
-    name: "cooking oil",
+    name: "Light Souls",
     price: 10.5,
     type: "rpg",
     offer: {
@@ -12,13 +12,13 @@ var products = [
   },
   {
     id: 2,
-    name: "Pasta",
+    name: "The Legend of Delza",
     price: 6.25,
     type: "rpg",
   },
   {
     id: 3,
-    name: "Instant cupcake mixture",
+    name: " Dragon Age",
     price: 5,
     type: "rpg",
     offer: {
@@ -30,37 +30,37 @@ var products = [
     id: 4,
     name: "All-in-one",
     price: 260,
-    type: "beauty",
+    type: "fantasy",
   },
   {
     id: 5,
     name: "Zero Make-up Kit",
     price: 20.5,
-    type: "beauty",
+    type: "fantasy",
   },
   {
     id: 6,
     name: "Lip Tints",
     price: 12.75,
-    type: "beauty",
+    type: "fantasy",
   },
   {
     id: 7,
     name: "Lawn Dress",
     price: 15,
-    type: "clothes",
+    type: "multiplayer",
   },
   {
     id: 8,
     name: "Lawn-Chiffon Combo",
     price: 19.99,
-    type: "clothes",
+    type: "multiplayer",
   },
   {
     id: 9,
     name: "Toddler Frock",
     price: 9.99,
-    type: "clothes",
+    type: "multiplayer",
   },
 ];
 // Array with products (objects) added directly with push(). Products in this array are repeated.
@@ -145,7 +145,7 @@ function generateCart() {
 function applyPromotionsCart(cart) {
   // Apply promotions to each item in the array "cart"
 
-  // PROMOTION FOR ITEM "COOKING OIL"
+  // PROMOTION FOR ITEM "Light Souls"
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].id === 1) {
       if (cart[i].quantity >= 3) {
