@@ -79,6 +79,22 @@ h2 {
   color: #0d2534;
 }
 
+.btn-outline-success:active {
+  background-color: #07cff6;
+  color: #0d2534;
+}
+
+.btn-outline-success:active:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn-check:focus + .btn-outline-success,
+.btn-outline-success:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .card {
   background-color: #0d2534;
   color: #07cff6;
@@ -86,6 +102,23 @@ h2 {
 
 .card img {
   width: 100px;
+}
+
+footer {
+  background-color: #0d2534;
+  color: #07cff6;
+  font-size: 1.1rem;
+}
+
+footer .socials a {
+  font-size: 1.5rem;
+  color: #fff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+footer .socials a:hover {
+  color: #07cff6;
 }
 
 @media (max-width: 304px) {

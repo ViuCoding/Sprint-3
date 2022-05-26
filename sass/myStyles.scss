@@ -78,6 +78,19 @@ h2 {
     background-color: $clr-1;
     color: $clr-3;
   }
+
+  &:active {
+    background-color: $clr-1;
+    color: $clr-3;
+  }
+
+  &:active:focus {
+    box-shadow: none;
+  }
+}
+.btn-check:focus + .btn-outline-success,
+.btn-outline-success:focus {
+  box-shadow: none;
 }
 
 .card {
@@ -85,6 +98,24 @@ h2 {
   color: $clr-1;
   img {
     width: 100px;
+  }
+}
+
+footer {
+  background-color: $clr-3;
+  color: $clr-1;
+  font-size: 1.1rem;
+
+  .socials {
+    a {
+      font-size: 1.5rem;
+      color: $white;
+      transition: all 0.5s ease;
+
+      &:hover {
+        color: $clr-1;
+      }
+    }
   }
 }
 
