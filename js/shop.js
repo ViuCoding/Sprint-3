@@ -46,7 +46,7 @@ var products = [
   },
   {
     id: 7,
-    name: "Nortfite",
+    name: "Sun wars",
     price: 15,
     type: "multiplayer",
   },
@@ -88,7 +88,7 @@ function cleanCart() {
   cart.length = 0;
   total = 0;
   document.getElementById("cart_list").innerHTML = "";
-  document.getElementById("total_price").innerHTML = 0;
+  document.getElementById("total_price").innerHTML = "0.00";
   updateCartBadge();
 }
 

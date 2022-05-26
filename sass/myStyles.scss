@@ -39,6 +39,11 @@ h2 {
   .nav-link {
     color: $clr-1;
     font-weight: 600;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: $white;
+    }
   }
 }
 
@@ -61,8 +66,10 @@ h2 {
   .btn {
     background-color: $clr-1;
     color: $clr-4;
+    transition: all 0.5s ease;
 
     &:hover {
+      transform: translateY(7px);
       background-color: $clr-4;
       color: $clr-1;
       border-color: $clr-1;
@@ -95,10 +102,14 @@ h2 {
 
 .card {
   background-color: $clr-3;
-  color: $clr-1;
+  color: $white;
+
   img {
     width: 100px;
   }
+}
+.shadow {
+  box-shadow: 0 0.2rem 1rem 0.2rem $clr-5 !important ;
 }
 
 footer {
@@ -125,8 +136,8 @@ footer {
   }
 }
 
-@media (max-width: 456px) {
+@media (max-width: 238px) {
   .remove {
-    margin-top: 5px;
+    margin-top: 10px;
   }
 }
