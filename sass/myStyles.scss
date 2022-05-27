@@ -130,6 +130,36 @@ footer {
   }
 }
 
+// CHECK OUT PAGE
+
+form {
+  color: $clr-1;
+  background-color: $clr-3;
+
+  .form-control {
+    border-color: $clr-1;
+    background-color: $clr-2;
+
+    &::placeholder {
+      color: $white;
+      opacity: 0.5;
+    }
+  }
+
+  .btn {
+    background-color: $clr-1;
+    color: $clr-4;
+    transition: all 0.5s ease;
+
+    &:hover {
+      transform: translateY(7px);
+      background-color: $clr-4;
+      color: $clr-1;
+      border-color: $clr-1;
+    }
+  }
+}
+
 @media (max-width: 304px) {
   .navbar-toggler {
     display: none;

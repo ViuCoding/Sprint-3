@@ -136,6 +136,51 @@ footer .socials a:hover {
   color: #07cff6;
 }
 
+form {
+  color: #07cff6;
+  background-color: #0d2534;
+}
+
+form .form-control {
+  border-color: #07cff6;
+  background-color: #194162;
+}
+
+form .form-control::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+
+form .form-control:-ms-input-placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+
+form .form-control::-ms-input-placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+
+form .form-control::placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+
+form .btn {
+  background-color: #07cff6;
+  color: #04131e;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+form .btn:hover {
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
+  background-color: #04131e;
+  color: #07cff6;
+  border-color: #07cff6;
+}
+
 @media (max-width: 304px) {
   .navbar-toggler {
     display: none;
