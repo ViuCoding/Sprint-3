@@ -19,8 +19,8 @@ function validate() {
     document.getElementById("fName").style.color = "white";
   } else {
     document.getElementById("errorName").style.display = "none";
-    document.getElementById("fName").style.backgroundColor = "aquamarine";
-    document.getElementById("fName").style.color = "black";
+    document.getElementById("fName").style.backgroundColor = "#07cff6";
+    document.getElementById("fName").style.color = "#04131e";
   }
 
   // Email Validation
@@ -32,8 +32,8 @@ function validate() {
     document.getElementById("fEmail").style.color = "white";
   } else {
     document.getElementById("errorEmail").style.display = "none";
-    document.getElementById("fEmail").style.backgroundColor = "aquamarine";
-    document.getElementById("fEmail").style.color = "black";
+    document.getElementById("fEmail").style.backgroundColor = "#07cff6";
+    document.getElementById("fEmail").style.color = "#04131e";
   }
 
   // Address Validation
@@ -43,8 +43,8 @@ function validate() {
     document.getElementById("fAddress").style.color = "white";
   } else {
     document.getElementById("errorAddress").style.display = "none";
-    document.getElementById("fAddress").style.backgroundColor = "aquamarine";
-    document.getElementById("fAddress").style.color = "black";
+    document.getElementById("fAddress").style.backgroundColor = "#07cff6";
+    document.getElementById("fAddress").style.color = "#04131e";
   }
 
   // Last Name Validation
@@ -56,8 +56,8 @@ function validate() {
     document.getElementById("fLastN").style.color = "white";
   } else {
     document.getElementById("errorLastN").style.display = "none";
-    document.getElementById("fLastN").style.backgroundColor = "aquamarine";
-    document.getElementById("fLastN").style.color = "black";
+    document.getElementById("fLastN").style.backgroundColor = "#07cff6";
+    document.getElementById("fLastN").style.color = "#04131e";
   }
 
   // Password Validation
@@ -69,8 +69,8 @@ function validate() {
     document.getElementById("fPassword").style.color = "white";
   } else {
     document.getElementById("errorPassword").style.display = "none";
-    document.getElementById("fPassword").style.backgroundColor = "aquamarine";
-    document.getElementById("fPassword").style.color = "black";
+    document.getElementById("fPassword").style.backgroundColor = "#07cff6";
+    document.getElementById("fPassword").style.color = "#04131e";
   }
 
   // Phone Number Validation
@@ -82,8 +82,8 @@ function validate() {
     document.getElementById("fPhone").style.color = "white";
   } else {
     document.getElementById("errorPhone").style.display = "none";
-    document.getElementById("fPhone").style.backgroundColor = "aquamarine";
-    document.getElementById("fPhone").style.color = "black";
+    document.getElementById("fPhone").style.backgroundColor = "#07cff6";
+    document.getElementById("fPhone").style.color = "#04131e";
   }
 }
 
