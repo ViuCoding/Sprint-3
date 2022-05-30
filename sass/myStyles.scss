@@ -1,11 +1,26 @@
 // COLOR VARIABLES
-
 $clr-1: #07cff6;
 $clr-2: #194162;
 $clr-3: #0d2534;
 $clr-4: #04131e;
 $clr-5: #020204;
 $white: #fff;
+
+// MIXINS
+@mixin btn-style {
+  .btn {
+    background-color: $clr-1;
+    color: $clr-4;
+    transition: all 0.5s ease;
+
+    &:hover {
+      transform: translateY(7px);
+      background-color: $clr-4;
+      color: $clr-1;
+      border-color: $clr-1;
+    }
+  }
+}
 
 body {
   background: $clr-4;
@@ -123,6 +138,36 @@ footer {
       &:hover {
         color: $clr-1;
       }
+    }
+  }
+}
+
+#shopping-cart {
+  color: $clr-1;
+  background-color: $clr-3;
+
+  table {
+    color: $white;
+
+    th[scope="row"] {
+      color: $clr-1;
+    }
+
+    td {
+      color: $clr-1;
+    }
+  }
+
+  .btn {
+    background-color: $clr-1;
+    color: $clr-4;
+    transition: all 0.5s ease;
+
+    &:hover {
+      transform: translateY(7px);
+      background-color: $clr-4;
+      color: $clr-1;
+      border-color: $clr-1;
     }
   }
 }

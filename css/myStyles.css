@@ -133,6 +133,38 @@ footer .socials a:hover {
   color: #07cff6;
 }
 
+#shopping-cart {
+  color: #07cff6;
+  background-color: #0d2534;
+}
+
+#shopping-cart table {
+  color: #fff;
+}
+
+#shopping-cart table th[scope="row"] {
+  color: #07cff6;
+}
+
+#shopping-cart table td {
+  color: #07cff6;
+}
+
+#shopping-cart .btn {
+  background-color: #07cff6;
+  color: #04131e;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#shopping-cart .btn:hover {
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
+  background-color: #04131e;
+  color: #07cff6;
+  border-color: #07cff6;
+}
+
 .carousel-caption {
   color: #07cff6;
 }
