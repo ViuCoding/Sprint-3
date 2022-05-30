@@ -157,7 +157,7 @@ function applyPromotionsCart(cart) {
     }
   }
 
-  // PROMOTION FOR ITEM "CAKE INGREDIENTS"
+  // PROMOTION FOR ITEM "Dragon Age"
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].id === 3) {
       if (cart[i].quantity >= 10) {
@@ -208,7 +208,7 @@ function addToCart(id) {
   // 2. Add found product to the cart array or update its quantity in case it has been added previously.
 
   // IF the array cart is empty, we push the first element with quantity = 1 to the array cart.
-  // We loop through the array of products and once we find the corresponding product id we send it to cart.
+  // We loop through the array of products and once we find the corresponding product id we push it to cart.
 
   let isDuplicated = false;
   let index;
@@ -284,6 +284,7 @@ function removeFromCart(id) {
   applyPromotionsCart(cart);
 }
 
+// This function is used to update the item quantity shown in the badge next to the cart icon
 function updateCartBadge() {
   let cartProductCount = 0;
 
