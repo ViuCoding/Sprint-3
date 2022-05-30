@@ -22,6 +22,8 @@ $white: #fff;
   }
 }
 
+// GENERAL STYLES
+
 body {
   background: $clr-4;
 }
@@ -31,6 +33,8 @@ h1 {
   text-transform: uppercase;
   color: $clr-1;
 }
+
+// NAVBAR STYLES
 
 .navbar {
   background-color: $clr-4;
@@ -67,62 +71,20 @@ h1 {
   width: 80px;
 }
 
+// HERO SECTION STYLES
+
 #hero {
+  @include btn-style();
+
   height: 80vh;
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url("../images/bg-2.jpg") center/cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  .btn {
-    background-color: $clr-1;
-    color: $clr-4;
-    transition: all 0.5s ease;
-
-    &:hover {
-      transform: translateY(7px);
-      background-color: $clr-4;
-      color: $clr-1;
-      border-color: $clr-1;
-    }
-  }
 }
 
-.btn-outline-success {
-  color: $clr-1;
-  border-color: $clr-1;
-
-  &:hover {
-    background-color: $clr-1;
-    color: $clr-3;
-  }
-
-  &:active {
-    background-color: $clr-1;
-    color: $clr-3;
-  }
-
-  &:active:focus {
-    box-shadow: none;
-  }
-}
-.btn-check:focus + .btn-outline-success,
-.btn-outline-success:focus {
-  box-shadow: none;
-}
-
-.card {
-  background-color: $clr-3;
-  color: $white;
-
-  img {
-    width: 100px;
-  }
-}
-.shadow {
-  box-shadow: 0 0.2rem 1rem 0.2rem $clr-5 !important ;
-}
+// FOOTER SECTION STYLES
 
 footer {
   background-color: $clr-3;
@@ -142,7 +104,11 @@ footer {
   }
 }
 
+// SHOPPING CART STYLES
+
 #shopping-cart {
+  @include btn-style();
+
   color: $clr-1;
   background-color: $clr-3;
 
@@ -157,28 +123,19 @@ footer {
       color: $clr-1;
     }
   }
-
-  .btn {
-    background-color: $clr-1;
-    color: $clr-4;
-    transition: all 0.5s ease;
-
-    &:hover {
-      transform: translateY(7px);
-      background-color: $clr-4;
-      color: $clr-1;
-      border-color: $clr-1;
-    }
-  }
 }
 
-// CHECK OUT PAGE
+// CAROUSEL STYLES
 
 .carousel-caption {
   color: $clr-1;
 }
 
+// FORM STYLES
+
 form {
+  @include btn-style();
+
   color: $clr-1;
   background-color: $clr-3;
 
@@ -198,20 +155,52 @@ form {
       opacity: 0.5;
     }
   }
+}
 
-  .btn {
+// BUTTON STYLES OVERRIDES
+
+.btn-outline-success {
+  color: $clr-1;
+  border-color: $clr-1;
+
+  &:hover {
     background-color: $clr-1;
-    color: $clr-4;
-    transition: all 0.5s ease;
+    color: $clr-3;
+  }
 
-    &:hover {
-      transform: translateY(7px);
-      background-color: $clr-4;
-      color: $clr-1;
-      border-color: $clr-1;
-    }
+  &:active {
+    background-color: $clr-1;
+    color: $clr-3;
+  }
+
+  &:active:focus {
+    box-shadow: none;
   }
 }
+
+.btn-check:focus + .btn-outline-success,
+.btn-outline-success:focus {
+  box-shadow: none;
+}
+
+// CARDS OVERRIDES
+
+.card {
+  background-color: $clr-3;
+  color: $white;
+
+  img {
+    width: 100px;
+  }
+}
+
+// SHADOW OVERRIDES
+
+.shadow {
+  box-shadow: 0 0.2rem 1rem 0.2rem $clr-5 !important ;
+}
+
+// MEDIA QUERIES
 
 @media (max-width: 304px) {
   .navbar-toggler {
