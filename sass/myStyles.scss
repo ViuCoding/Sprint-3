@@ -127,6 +127,10 @@ footer {
 
 // CAROUSEL STYLES
 
+.carousel-header {
+  display: none;
+}
+
 .carousel-caption {
   color: $clr-1;
 }
@@ -202,14 +206,26 @@ form {
 
 // MEDIA QUERIES
 
+@media (max-width: 238px) {
+  .remove {
+    margin-top: 10px;
+  }
+}
+
 @media (max-width: 304px) {
   .navbar-toggler {
     display: none;
   }
 }
 
-@media (max-width: 238px) {
-  .remove {
-    margin-top: 10px;
+@media (max-width: 335px) {
+  #shopping-cart {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .carousel-header {
+    display: block;
   }
 }
